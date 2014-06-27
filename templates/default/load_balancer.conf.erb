@@ -5,8 +5,8 @@ upstream <%= @resource.application.name %>-upstream {
 		<% end -%>
 	<% end -%>
 	<% @hosts.each do |node| %>
-	server <%= node.attribute?('cloud') ? node['cloud']['local_ipv4'] : node['ipaddress'] %>:<%= @resource.application_port %>;
-	<% end %>
+  server <%= node %>:<%= @resource.application_port %>;
+  <% end %>
 }
 
 <% if @resource.ssl -%>
