@@ -147,6 +147,7 @@ application node[:rails][:app][:name] do
     #### defaults ###
     template            node[:rails][:nginx][:template]
     server_name         node[:rails][:nginx][:server_name]
+    hosts               node[:rails][:nginx][:hosts]
     port                node[:rails][:nginx][:port]
     application_port    node[:rails][:nginx][:application_port]
     application_socket  node[:rails][:nginx][:application_socket]

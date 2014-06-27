@@ -53,6 +53,7 @@ default[:rails][:nginx][:application_socket] = "/var/run/unicorn/#{node[:rails][
 default[:rails][:nginx][:port] = 80
 default[:rails][:nginx][:template] = "load_balancer.conf.erb"
 default[:rails][:nginx][:server_name] = node['fqdn']
+default[:rails][:nginx][:hosts] = nil
 default[:rails][:nginx][:static_files] = {}
 default[:rails][:nginx][:ssl] = false
 default[:rails][:nginx][:ssl_certificate] = "#{node['fqdn']}.crt"
